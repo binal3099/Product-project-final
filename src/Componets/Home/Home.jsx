@@ -5,12 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { EditProductasync, getAllAsyncData, removeProductasync } from '../../Services/Action/Product Action/Productaction';
-// import { addProductasync } from '../../Services/Action/action';
-
 function Home() {
 
     const productData = useSelector(state => state.Productreducer.products)
-    console.log(productData,"Prooooooooooo");
+    console.log(productData,"Product");
 
     const [prodata , setprodata] = useState(productData)
 
@@ -61,14 +59,14 @@ function Home() {
                   <tr>
                     <td>
                       <div style={{width:"100px", height:"100px"}}>
-                        <img src={data.produt_Img} alt="" style={{width:"100%", height:"100%",objectFit:"cover"}} />
+                        <img src={data.produt_Img} alt="img" style={{width:"100%", height:"100%",objectFit:"cover"}} />
                       </div>
                     </td>
                     <td>{data.produt_Name}</td>
                     <td>{data.produt_Category}</td>
 
                     <td>{data.produt_Price}</td>
-                    <td><button className='btn btn-danger me-3' onClick={() => handleRemove(data.id)}>Remove</button><button className='btn btn-primary' onClick={() => handleEdit(data.id)}>Edit</button>
+                    <td><button className='btn btn-danger me-3' onClick={() => handleRemove(data.id)}>Delete</button><button className='btn btn-primary' onClick={() => handleEdit(data.id)}>Edit</button>
                     </td>
                     
                     

@@ -14,7 +14,6 @@ function AddProduct() {
   }
   );
 
-  // console.log(inputValue);
   const dispatch = useDispatch()
 
 
@@ -47,19 +46,19 @@ function AddProduct() {
 
       <form className='col-12' onSubmit={hadlesubmit}>
         <div class=" col-6 mb-3 mt-3">
-          <label class="form-label">Title :</label>
+          <label class="form-label">Name</label>
           <input type="text" class="form-control" placeholder="Enter Product Name" name="produt_Name" onChange={handlechange} value={inputValue.produt_Name} />
         </div>
         <div class="mb-3 col-6 ">
-          <label class="form-label">Category :</label>
+          <label class="form-label">Category</label>
           <input type="text" class="form-control" placeholder="Enter Product Category" name="produt_Category" onChange={handlechange} value={inputValue.produt_Category} />
         </div>
         <div class="mb-3 col-6 ">
-          <label class="form-label">Price :</label>
+          <label class="form-label">Price</label>
           <input type="text" class="form-control" placeholder="Enter Product Reting" name="produt_Price" onChange={handlechange} value={inputValue.produt_Price} />
         </div>
         <div class="mb-3 col-6 ">
-          <label class="form-label">Img :</label>
+          <label class="form-label">Img</label>
           <input type="text" class="form-control" placeholder="Enter Product Qty" name="produt_Img" onChange={handlechange} value={inputValue.produt_Img} />
         </div>
        
